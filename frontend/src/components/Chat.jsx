@@ -4,10 +4,10 @@ import ScrollToBottom from 'react-scroll-to-bottom';
 import { saveChat } from '../redux/actions/chatActions';
 
 const Chat = ({socket, userName, room}) => {
-  let chat1 = []
+  let chat = []
     const [currentMessage, setCurrentMessage] = useState("");
     const {chats} = useSelector((state)=> state)
-    const [messageList, setMessageList] = useState(chat1);
+    const [messageList, setMessageList] = useState(chat);
 useEffect(() => {
 chats.length !== 0 && setMessageList(chats)
 },[chats])
